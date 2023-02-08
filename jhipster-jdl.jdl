@@ -1,0 +1,50 @@
+
+entity Owner {
+	firstName String,
+    lastName String,
+	address String,
+    city String,
+    telephone String
+}
+
+entity Pet {
+	name String,
+    birthdate LocalDate
+}
+
+entity PetType {
+	name String
+}
+
+entity Visit {
+	date LocalDate,
+    description String
+}
+
+entity Vet {
+	firstName String,
+    lastName String
+}
+
+entity Specialty {
+	name String
+}
+
+relationship ManyToMany {
+	Vet{specialties} to Specialty{experts}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Owner{pets} to Pet{owner},
+	Pet{visits} to Visit
+}
+
+relationship ManyToOne {
+	Pet{type} to PetType
+}
+
+
+// Set service options to all except few
+service all with serviceImpl 
+
