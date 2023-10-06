@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230207185200",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vet",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Vet",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "specialty",
+      "otherEntityRelationshipName": "experts",
+      "ownerSide": true,
+      "relationshipName": "specialties",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

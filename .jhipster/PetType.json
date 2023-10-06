@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20230207185158",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "pet_type",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PetType",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
